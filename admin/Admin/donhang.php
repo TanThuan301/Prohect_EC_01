@@ -44,7 +44,7 @@ if (isset($_GET['quanly']) == 'xacnhanhuydonhang' && isset($_GET['xacnhanhuy']) 
 }
 $sql_update_donhang = mysqli_query($con, "UPDATE tbl_donhang SET huydon='$xacnhanhuy' WHERE magiaodich='$magiaodich'");
 $sql_update_giaodich = mysqli_query($con, "UPDATE tbl_giaodich SET huydon='$xacnhanhuy' WHERE magiaodich='$magiaodich'");
-//    header('Location: xulydonhang.php');
+  //  header('Location: donhang.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -391,7 +391,7 @@ $sql_update_giaodich = mysqli_query($con, "UPDATE tbl_giaodich SET huydon='$xacn
                     <?php if ($row_dh['huydon'] == 0) {
                       echo "----";
                     } elseif ($row_dh['huydon'] == 1) {
-                      echo '<a href="?quanly=xacnhanhuydonhang&magiaodich=' . $row_dh['magiaodich'] . '&xacnhanhuy=2">Xác nhận hủy đơn</a>';
+                      echo '<a href="donhang.php?quanly=xacnhanhuydonhang&magiaodich=' . $row_dh['magiaodich'] . '&xacnhanhuy=2">Xác nhận hủy đơn</a>';
                     } else {
                       echo 'Đã hủy';
                     }

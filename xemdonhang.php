@@ -110,6 +110,7 @@ $sql_update_giaodich = mysqli_query($con, "UPDATE tbl_giaodich SET huydon='$huyd
                                                                                                                                     echo "Đơn hàng đang được xử lí !";
                                                                                                                                 } else {
                                                                                                                                     echo "<lable style='color:red'>Đơn hàng đang được giao !</lable>";
+                                                                                                                                   
                                                                                                                                 }
 
                                                                                                                                 ?></p>
@@ -120,7 +121,7 @@ $sql_update_giaodich = mysqli_query($con, "UPDATE tbl_giaodich SET huydon='$huyd
                                                 <div class="container_actiondh" style="/* text-align: center; */width: 100%;text-align: -webkit-center;">
                                                     <!-- <button type="button" class="btn btn"> -->
                                                     <div style="font-size: 1.4rem;font-weight: 600;/* color: #333; */background: #078349;width: 50%;height: 30px;border-radius: 5px;margin-bottom: 10px;padding-top: 3%;">
-                                                        <a href="chitietdhnguoidung.php?quanly=chitietdonhang&magiaodich=<?php echo $row_donhang['magiaodich'] ?> " class="text_huydonhang" style="color: #fff;">Xem chi tiết</a>
+                                                        <a href="chitietdhnguoidung.php?quanly=chitietdonhang&magiaodich=<?php echo $row_donhang['magiaodich'] ?> " class="text_huydonhang" style="color: #fff;" >Xem chi tiết</a>
 
                                                     </div>
                                                     <!-- </button> -->
@@ -130,13 +131,23 @@ $sql_update_giaodich = mysqli_query($con, "UPDATE tbl_giaodich SET huydon='$huyd
                                                         <?php
                                                         // 0: yeu cau huy 1:dang cho ben kia con lai da xu li xong
                                                         if ($row_donhang['huydon'] == 0) {
+                                                            if($row_donhang['tinhtrangdh'] == 1){
+
+                                                                echo "<lable style='color:#c09c28'>Dang giao</lable>";
                                                         ?>
-                                                           <a href="xemdonhang.php?quanly=yeucauhuydon&magiaodich=<?php echo $row_donhang['magiaodich'] ?>&huydon=1 " class="text_huydonhang" style="color: #fff;">Hủy đơn hàng</a>
+                                                           <!-- <a href="xemdonhang.php?quanly=yeucauhuydon&magiaodich=<?php echo $row_donhang['magiaodich'] ?>&huydon=1 " class="text_huydonhang" style="color: #fff;" id="huydonhang_dg" >Hủy đơn hàng</a> -->
+                                                                
                                                         <?php
+                                                        }else{
+                                                            ?>
+                                                           <a href="xemdonhang.php?quanly=yeucauhuydon&magiaodich=<?php echo $row_donhang['magiaodich'] ?>&huydon=1 " class="text_huydonhang" style="color: #fff;" id="huydonhang_dg" >Hủy đơn hàng</a>
+                                                           
+                                                        <?php
+                                                        }
                                                         } elseif ($row_donhang['huydon'] == 1) {
-                                                            echo "<lable style='color:#c09c28'>Đang chờ hủy</lable>";
+                                                            echo "<lable style='color:#baf501;'>Đang chờ hủy</lable>";
                                                         } else {
-                                                            echo "<lable style='color:#c9c5b6'>Đã hủy'</lable>";
+                                                            echo "<lable style='color:#c9c5b6'>Đã hủy</lable>";
                                                         }
                                                         ?>
 
@@ -171,8 +182,8 @@ $sql_update_giaodich = mysqli_query($con, "UPDATE tbl_giaodich SET huydon='$huyd
         </div>
         <style>
             .tacadonhang {
-                height: 400px;
-                overflow: auto;
+                /* height: 600px; */
+                /* overflow: auto; */
             }
 
             .text_huydonhang {
@@ -180,6 +191,9 @@ $sql_update_giaodich = mysqli_query($con, "UPDATE tbl_giaodich SET huydon='$huyd
             }
         </style>
         <!-- Cuoi -->
+    </div>
         <?php
         include("footer.php");
         ?>
+</body>
+</html>

@@ -128,7 +128,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'dangxuat') {
                                     var html_data = document.querySelector('.sp_gh_row');
                                     var btn_dh001 = document.querySelector('.btn_thanhtoan');
                                     // console.log(btn_dh001)
-                                    
+
                                     if (arraySP_Giohang == null || arraySP_Giohang.length == 0) {
                                         html_data.innerHTML = `
                                     <p style="font-size: 2rem;/* text-align: center; */margin-top: 10%;margin-left: 25%;color:red;font-weight:bold;">Không có sản phẩm nào</p>
@@ -241,16 +241,16 @@ if (isset($_GET['action']) && $_GET['action'] == 'dangxuat') {
                                                     // data_item_gh.delete(item.product.id_gh);
                                                     // showGH();
                                                 }
-                                                
+
                                                 // console.log(JSON.parse(storage))
                                                 storage = localStorage.getItem('data_gh')
-                                                if(JSON.parse(storage)==0 || JSON.parse(storage)==null){
+                                                if (JSON.parse(storage) == 0 || JSON.parse(storage) == null) {
                                                     console.log("xoa het")
                                                     showGH();
                                                 }
                                                 // console.log(data_item_gh);
-                                                
-                                                
+
+
                                                 tomtatdonhang();
                                                 swal("Sản phẩm được xóa thành công !", {
                                                     icon: "success",
@@ -260,9 +260,9 @@ if (isset($_GET['action']) && $_GET['action'] == 'dangxuat') {
                                             }
                                         });
 
-                                   
 
-                                    
+
+
 
 
                                 }
@@ -286,12 +286,35 @@ if (isset($_GET['action']) && $_GET['action'] == 'dangxuat') {
                                                 //    console.log(giatungsp);
 
                                                 input_sl_sp_gh[i].value++
-                                                // total_total=(totalsp+giatungsp);
+                                                // console.log( input_sl_sp_gh[i].value);
                                                 input_total_sp[i].value = new Intl.NumberFormat('it-IT').format(totalsp + giatungsp)
                                                 // console.log(Intl.NumberFormat('it-IT', { style: 'currency', currency: 'VND' }).format( total_total));
                                                 // total_total.replaceAll(3,'.')
+                                                // console.log(input_sl_sp_gh[i].getAttribute('id-data-input'));
+                                                var storage_gh = localStorage.getItem('data_gh');
+                                                var storage_sp_gh = JSON.parse(storage_gh);
+                                                var item = storage_sp_gh.find(quantitysp => quantitysp.product.id_gh == input_sl_sp_gh[i].getAttribute('id-data-input'));
+                                                // console.log(item);
+                                                // // console.log(id_sp);
+                                                // console.log(item);
+                                                if (item) {
+                                                    item.quantity = parseInt(input_sl_sp_gh[i].value);
+                                                    console.log(parseInt(input_sl_sp_gh[i].value));
+                                                    localStorage.setItem('data_gh', JSON.stringify(storage_sp_gh));
+                                                }
+
+
+
                                             };
                                         }
+                                        // var inputid_gh_soluong = document.querySelector('#ip_gh');
+                                        // var id_sp = inputid_gh_soluong.getAttribute('id-data-input');
+                                        // 
+
+                                        // console.log(id_sp)
+
+
+
                                         tomtatdonhang();
                                     }
                                     if (btn_giam_gh_sp != null) {
@@ -304,12 +327,23 @@ if (isset($_GET['action']) && $_GET['action'] == 'dangxuat') {
                                                 if (input_sl_sp_gh[i].value <= 1) {
                                                     // value.setAttribute('disabled', 'disabled'); 
                                                     input_total_sp[i].value = new Intl.NumberFormat('it-IT').format(giatungsp)
+                                                    
                                                 } else {
                                                     input_sl_sp_gh[i].value--
                                                     // input_total_sp[i].value-=number_input__gia_tung_sp[i].value;
                                                     input_total_sp[i].value = new Intl.NumberFormat('it-IT').format(totalsp - giatungsp)
                                                 }
-
+                                                var storage_gh = localStorage.getItem('data_gh');
+                                                var storage_sp_gh = JSON.parse(storage_gh);
+                                                var item = storage_sp_gh.find(quantitysp => quantitysp.product.id_gh == input_sl_sp_gh[i].getAttribute('id-data-input'));
+                                                // console.log(item);
+                                                // // console.log(id_sp);
+                                                // console.log(item);
+                                                if (item) {
+                                                    item.quantity = parseInt(input_sl_sp_gh[i].value);
+                                                    console.log(parseInt(input_sl_sp_gh[i].value));
+                                                    localStorage.setItem('data_gh', JSON.stringify(storage_sp_gh));
+                                                }
 
 
                                             };
@@ -355,24 +389,9 @@ if (isset($_GET['action']) && $_GET['action'] == 'dangxuat') {
 
                                     <?php
                                     } else {
-                                        
+
 
                                     ?>
-                                        var inputid_gh_soluong=document.querySelector('#ip_gh');
-                                        var id_sp=inputid_gh_soluong.getAttribute('id-data-input');
-                                        var storage_gh=localStorage.getItem('data_gh');
-                                        var storage_sp_gh=JSON.parse(storage_gh);
-
-                                        var item=storage_sp_gh.find(quantitysp => quantitysp.product.id_gh==id_sp);
-                                        // console.log(inputid_gh_soluong.value);
-                                        // console.log(id_sp);
-                                        // console.log(item);
-                                        if(item){
-                                            item.quantity=parseInt(inputid_gh_soluong.value);
-                                            console.log(parseInt(inputid_gh_soluong.value));
-                                            localStorage.setItem('data_gh',JSON.stringify(storage_sp_gh));
-                                        }
-                                        // console.log(id_sp)
 
                                         window.location = 'thanhtoan.php'
                                     <?php

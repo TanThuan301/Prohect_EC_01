@@ -430,7 +430,7 @@ if (isset($_POST['thanhtoangh'])) {
 
                                             <div class="thongtindiachinhanhang" style="border-top: 1px solid;margin-top: 40px;padding-top: 20px;">
                                                 <div class="input-group-prepend">
-                                                    <span class="input-group-text">Tổng cộng: <input type="text" style="background: none;border: none;width: 160px;color: red;font-weight: 800;" disabled='disable' value="" id="thanhthoantomtat_tongcong" name="thanhthoantomtat_tongcong"></input></span>
+                                                    <span class="input-group-text" style="margin-left: -86px;">Tổng cộng: <input type="text" style="background: none;border: none;width:50%;color: red;font-weight: 800;" disabled='disable' value="" id="thanhthoantomtat_tongcong" name="thanhthoantomtat_tongcong"></input></span>
 
                                                 </div>
 
