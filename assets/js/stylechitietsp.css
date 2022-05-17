@@ -1,0 +1,115 @@
+span.item_price {
+    font-size: 18px;
+    color: #d60404;
+}
+.single-infoagile ul li {
+    display: block;
+    font-size: 14px;
+}
+.product-single-w3l {
+    border-top: 1px solid #0879c9;
+}
+
+.product-single-w3l p i {
+    color: #0879c9;
+    font-size: 24px;
+}
+
+.product-single-w3l p {
+    color: #000;
+    letter-spacing: 0.5px;
+}
+
+.product-single-w3l ul li {
+    list-style: inside;
+    font-size: 14px;
+    line-height: 1.7;
+}
+.occasion-cart .snipcart-details {
+    width: 45%;
+}
+.occasion-cart .snipcart-details {
+    width: 38%;
+    margin: 0;
+}
+.snipcart-details {
+    width: 77%;
+    margin: 0 auto;
+}
+
+.btn-danger.my-cart-btn:focus {
+    outline: none;
+}
+
+.snipcart-details input.button {
+    font-size: 13px;
+    color: #fff;
+    background: #0879c9;
+    text-decoration: none;
+    border: none;
+    border-radius: 0;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 13px;
+    outline: none;
+    letter-spacing: 1px;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.45);
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+.snipcart-details input.button:hover {
+    background: #000;
+}
+
+.occasion-cart .snipcart-details {
+    width: 38%;
+    margin: 0;
+}
+@media(max-width: 640px) {
+    h3.tittle-w3l {
+        font-size: 34px;
+    }
+    h3.tittle-w3l span {
+        font-size: 40px;
+    }
+    h3.heading-tittle {
+        font-size: 28px;
+    }
+    .page-head_agile_info_w3l {
+        min-height: 150px;
+    }
+}
+h3.tittle-w3l {
+    font-size: 36px;
+}
+h3.tittle-w3l span {
+    font-size: 46px
+}
+h3.heading-tittle {
+    font-size: 30px;
+}
+h3.heading-tittle {
+    color: #000;
+    font-size: 32px;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.19);
+}
+h3.tittle-w3l {
+    color: #000;
+    font-size: 38px;
+    letter-spacing: 1px;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.19);
+}
+
+h3.tittle-w3l span {
+    color: #0879c9;
+    font-size: 50px;
+    letter-spacing: 0;
+}

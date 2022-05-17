@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- scroll -->
+    <link rel="stylesheet" href="assets/css/scroll.css">
+    <script src="/assets/js/scroll.js"></script>
+    <!-- ********** -->
+     <!--modal-->
+     <script src="/assets/js/modal.js"></script>
+    <!-- fomat the body -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <!-- icon  -->
+    <link href="assets/fontawesome-free-5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <title>Trang chủ</title>
+</head>
+
+<body>
+    <div class="app">
+         <!-- Tiêu đề -->
+
+
+         <div class="header">
+            <div class="grid wide">
+                <nav class="hearder__navbar">
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item header__navbar-item--gachdoc header__qr-hover  ">
+                            Shop Online
+                            <div class="header-qr">
+                                <img src="assets/image/QR.png" alt="QR" class="header-qr-qr">
+                                <div class="herder-qr-app">
+                                    <img src="assets/image/Chplay.png" alt="" class="header-qr-dowload-img">
+                                    <img src="assets/image/store.png" alt="" class="header-qr-dowload-img">
+                                </div>
+
+                            </div>
+
+                        </li>
+                        <li class="header__navbar-item">
+                            <span class="header__navbar-item-no-poiter">Kết nối</span>
+                            <a href="" class="header__navbar-item-icon">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="" class="header__navbar-item-icon">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+                        </li>
+                        <li class="header__navbar-item"><a
+                                class=" header__navbar-item-margin_right header__navbar-item-link header__navbar-item--strong"
+                                href="homepage.html">Trang chủ</a></li>
+                        <li class="header__navbar-item"><a
+                                class="header__navbar-item-margin_right header__navbar-item-link header__navbar-item--strong"
+                                href="homepage.html#gt">Giới thiệu</a></li>
+                        <li class="header__navbar-item"><a
+                                class="header__navbar-item-margin_right header__navbar-item-link header__navbar-item--strong"
+                                href="#">Sản phẩm</a></li>
+
+                    </ul>
+                    <ul class="header__navbar-list">
+
+                        <li class="header__navbar-item header__navbar-item--has-notify">
+                            <a class="header__navbar-item-link" href="#">
+                                <a href="" class="header__navbar-item-icon">
+                                    <i class="far fa-bell"></i>
+                                </a>
+                                Thông báo</a>
+                            <div class="header_notify">
+                                <header class="header_notify_header">
+                                    <h3>Thông báo mới nhận</h3>
+                                </header>
+                                <ul class="header_notify_list">
+                                    <li class="header_notify_item header_notify_item--viewed">
+                                        <a class="header_notify_link">
+                                            <img src="assets/image/anh1.png" alt="" class="header_notify_img">
+                                            <div class="header_notify_info">
+                                                <span class="header_notify_name">Voucher của bạn sắp hết hạn!!!</span>
+                                                <span class="header_notify_desc">Bạn ơi!!! Voucher Giảm giá sắp hết hạn
+                                                    vào ngày mai! Dùng ngay kẻo hết!!!</span>
+                                            </div>
+
+                                        </a>
+                                    </li>
+
+                                    <li class="header_notify_item ">
+                                        <a class="header_notify_link">
+                                            <img src="assets/image/anh2.png" alt="" class="header_notify_img">
+                                            <div class="header_notify_info">
+                                                <span class="header_notify_name">Đặt quần áo ngay: Giảm đến 40K</span>
+                                                <span class="header_notify_desc">💃 Giảm thẳng 40k cho đơn đầu tiên của
+                                                    khách hàng mới!! Hãy đặt ngay!!! </span>
+                                            </div>
+
+                                        </a>
+                                    </li>
+
+                                    <li class="header_notify_item ">
+                                        <a class="header_notify_link">
+                                            <img src="assets/image/anhsanphamtrongthongbao.jpg" alt=""
+                                                class="header_notify_img">
+                                            <div class="header_notify_info">
+                                                <span class="header_notify_name">Tên sản phẩm</span>
+                                                <span class="header_notify_desc">Mô tả sản phẩm</span>
+                                            </div>
+
+                                        </a>
+                                    </li>
+
+
+
+                                </ul>
+                                <footer class="header_notify_footer">
+                                    <a href="" class="header_notify_footer_btn">Xem tất cả</a>
+                                </footer>
+
+                            </div>
+
+
+                        </li>
+
+
+                        <li class="header__navbar-item"><a class="header__navbar-item-link" href="#">Trợ giúp</a></li>
+                        <li class="header__navbar-item header__navbar-item--strong header__navbar-item--gachdoc"
+                            id="btn_dangki">Đăng ký</li>
+                        <li class="header__navbar-item header__navbar-item--strong" id="btn_dangnhap">Đăng nhập</li>
+                        <li class="header__navbar-item header__navbar-hover " onclick="clicksearch()">
+                            <!-- <div class="header-search"> -->
+                            <!-- <input type="text" class="header-search-input" placeholder="Tìm kiếm sản phẳm"> -->
+                            <i class="fas fa-search search-icon "></i>
+                            <!-- <input type="text" class="header-search-input" placeholder="Tìm kiếm sản phẳm"> -->
+                            <div id="header-searchid" class="header-search">
+                                <input type="text" class="header-search-input" placeholder="Tìm kiếm sản phẩm">
+
+                            </div>
+
+
+
+                            <!-- </div> -->
+                        </li>
+                        <!-- KHi click vao thanh tim kiem se hien thi -->
+
+                        <li class="header__navbar-item">
+                            <i class="fas fa-cart-plus search-icon" id="cart"></i>
+                        </li>
+
+                    </ul>
+                </nav>
+                <!--phan logo tim kiem gio hang-->
+                <!-- *********************** -->
+                <!-- <div class="header-timkem"> -->
+                <!-- <a href="#" class="header-logo">
+                        <img src="assets/image/logo.png" class="header-logo-img">
+                    </a> -->
+
+                <!-- <div class="header-search">
+                        <input type="text" class="header-search-input" placeholder="Tìm kiếm sản phẳm">
+                        <i class="fas fa-search search-icon"></i> -->
+                <!-- <img src="assets/image/timkiem.png" alt="" class="search-icon"> -->
+
+                <!-- </div>
+
+                    <div class="header-giohang">
+                        <img src="assets/image/giohang1.png" alt="" class="giohang-icon">
+                    </div>
+
+                </div> -->
+                <!-- ******************************* -->
+
+            </div>
+
+
+        </div>
+        <!-- Phan container -->
+        <div class="container">
+            <div class="grid wide">
+                <div class="row slide ">
+                    <div onclick="changeImage()" class="slidehomepage">
+                        <div class="image">
+                            <img src="assets/image/anhnenslide6.jpg" alt="Anh nen" id="img">
+                            <p id="text">Đừng chạy theo xu hướng. Đừng khiến bản thân lệ thuộc vào thời trang. Hãy để chính mình là người quyết định bản thân sẽ mặc gì cũng như sẽ sống ra sao</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row gioithieu " id="gt">
+                    <h3 class="heder_text">Giới thiệu</h3>
+                    <div class="container_gt">
+                        <div class="col l-5">
+                            <p class="text_gt">
+                                Shop Thời Trang Online với phương châm "Đồng hành cùng phong cách thời trang của bạn" sẽ là nơi mua sắm an toàn và uy tín, bởi chúng tôi luôn đề cao tiêu chí mang đến cho quý khách những sản phẩm chất lượng nhất với giá cả luôn phải chăng.</br>
+
+                                Shop Thời Trang Love Tree chuyên cung cấp:
+                                </br>
+                                - Thời trang công sở
+                                </br>
+                                - Thời trang nam, nơi
+                                </br>
+                                - Thời trang cặp và đồng phục với nhiều mặt hàng đa dạng và phong phú như áo thun, áo sơ mi, áo vest, đầm, váy, quần jean, quần tây,.... sẽ là sự lựa chọn tốt nhất cho phong cách thời của các bạn.
+                                </br>
+
+                                Tuy Shop Thời Trang hiện chủ yếu chỉ bán hàng online nhưng luôn luôn đảm bảo uy tín và chất lượng sản phẩm (Nếu trong quá trình mua - bán hàng xảy ra lỗi từ phía shop, chúng tôi sẽ hoàn trả tiền và bồi thường thiệt hại cho quý khách)
+                            </p>
+                        </div>
+                        <div class="col l-7">
+                            <div onclick="changeImage1()" class="image_gt">
+                                <img src="assets/image/anhnengt.jpg" alt="" id="img_gt">
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!-- js slide gt -->
+                    <script>
+                        var index1 = 1;
+
+                        changeImage1 = function() {
+
+                            var img = ["assets/image/anhnengt.jpg", "assets/image/anhnengt2.jpg", "assets/image/anhnenslide6.jpg"];
+
+                            document.getElementById("img_gt").src = img[index1];
+
+                            index1++;
+
+                            if (index1 == 3) {
+                                index1 = 0;
+
+                            }
+
+
+                        }
+                        setInterval(changeImage1, 5000);
+                    </script>
+
+                </div>
+
+
+
+
+
+            </div>
+
+
+        </div>
+        <!-- js slide -->
+        <script>
+            var index = 1;
+            var indextext = 1;
+            changeImage = function() {
+                var text1 = "Thời trang chính là vỏ bọc sắt để đấu tranh với thực tại trong cuộc sống hàng ngày";
+
+                var text2 = "Bất cứ ai cũng có thể diện những bộ cánh đẹp nhất và trở nên thật lộng lẫy, nhưng những thứ mọi người mặc trong ngày nghỉ mới thực sự hấp dẫn";
+                var text3 = "Ai nói rằng tiền không thể mua hạnh phúc, chỉ đơn giản là họ không biết đi mua sắm ở đâu .Hãy đến với chúng tôi sẽ giúp bạn";
+                var text4 = "Thời trang không nhất thiết là về nhãn hiệu. Đó cũng không phải về thương hiệu. Mà chính là một điều khác đến từ bên trong con người bạn";
+                var text5 = "Thời trang có thể phai tàn nhưng phong cách sẽ tồn tại mãi mã";
+                var text = [text1, text2, text3, text4, text5];
+                var img = ["assets/image/anhnenslide4.jpg", "assets/image/anhnenslide6.jpg", "assets/image/anhnenslide7.jpg", "assets/image/anhnenslide5.jpg", "assets/image/anhnenslide5.1.jpg"];
+
+                document.getElementById("img").src = img[index];
+                document.getElementById("text").innerHTML = text[indextext];
+
+                index++;
+                indextext++;
+                if (index == 5) {
+                    index = 1;
+
+                }
+                if (indextext == 5) {
+                    indextext = 1;
+                }
+
+            }
+            setInterval(changeImage, 2000);
+        </script>
+        <!-- Phan cuoi -->
+        <div class="footer">
+            <div class="grid wide">
+                <div class="row footer-content">
+                    <div class="col l-2-4">
+                        <h3 class="footer-heading">Chăm sóc khách hàng</h3>
+                        <ul class="footer-heading-list">
+                            <li class="footer-heading-item"><a href="#" class="footer-heading-link">Trung tâm trợ giúp</a>
+                            </li>
+                            <li class="footer-heading-item"><a href="#" class="footer-heading-link">Hướng dẫn mua hàng</a>
+                            </li>
+                            <li class="footer-heading-item"><a href="#" class="footer-heading-link">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col l-2-4">
+    
+                        <h3 class="footer-heading">Giới thiệu</h3>
+                        <ul class="footer-heading-list">
+                            <li class="footer-heading-item"><a href="#" class="footer-heading-link">Giới thiệu</a></li>
+                            <li class="footer-heading-item"><a href="#" class="footer-heading-link">Tuyển dụng</a></li>
+                            <li class="footer-heading-item"><a href="#" class="footer-heading-link">Điều khoảng</a></li>
+                        </ul>
+                    </div>
+                    <div class="col l-2-4">
+                        <h3 class="footer-heading">Thành viên sáng lập</h3>
+                        <ul class="footer-heading-list">
+                            <!-- <li class="footer-heading-item"><a href="#" class="footer-heading-link">Nguyễn Văn A</a></li> -->
+                            <li class="footer-heading-item"><a href="#" class="footer-heading-link">Hồ Tấn Thuận</a></li>
+                            <li class="footer-heading-item"><a href="#" class="footer-heading-link">Minh Hiếu Calatog</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col l-2-4">
+                        <h3 class="footer-heading">Theo dõi</h3>
+                        <ul class="footer-heading-list">
+                            <li class="footer-heading-item"><a href="#" class="footer-heading-link">Facebook</a></li>
+                            <li class="footer-heading-item"><a href="#" class="footer-heading-link">Instagram</a></li>
+                            <li class="footer-heading-item"><a href="#" class="footer-heading-link">Youtube</a></li>
+                        </ul>
+    
+                    </div>
+                    <div class="col l-2-4">
+                        <h3 class="footer-heading">Tải app</h3>
+                        <div class="footer-dowload">
+    
+                            <img src="assets/image/qr1.png" alt="QR" class="footer-app-qr-img">
+    
+                            <div class="footer-app-dowload">
+                                <a href="#" class="footer-app-dowload-link">
+                                    <img src="assets/image/Chplay.png" alt="QR" class="footer-app-dowload-img">
+    
+                                </a>
+                                <a href="#" class="footer-app-dowload-link">
+                                    <img src="assets/image/store.png" alt="QR" class="footer-app-dowload-img">
+    
+    
+                                </a>
+                                <a href="#" class="footer-app-dowload-link">
+                                    <img src="assets/image/appgallery.png" alt="QR" class="footer-app-dowload-img">
+    
+    
+                                </a>
+    
+    
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+                <!-- Phân bản quyên -->
+                <div class="row footer-copyright">
+                    <p class="footer-text">@2021 - Bản quyền thuộc về trường ĐH Sài Gòn</p>
+                </div>
+            </div>
+    
+    
+        </div>
+    </div>
+    
+     <!--đăng kí đăng nhập-->
+    <!--form  dang nhap-->
+    <div class="modal" id="modal_id_dangnhap">
+        <div class="modal_overlay" id="id_modal_overlay_dangnhap">
+
+        </div>
+        <div class="modal_body">
+            <div class="xacminh">
+                <div class="xacminh_container">
+                    <div class="xacminh_header">
+                        <h3 class="xacminh_heding">Đăng nhập</h3>
+                        <span class="xacminh_chuyendoiform-btn">Đăng kí</span>
+                    </div>
+
+                    <div class="xacminh_form">
+                        <div class="xacminh_form-group">
+                            <input type="text" class="xacminh_form-input" placeholder="Email của bạn">
+                        </div>
+
+                        <div class="xacminh_form-group">
+                            <input type="password" class="xacminh_form-input" placeholder="Mật khẩu của bạn">
+                        </div>
+
+                    </div>
+
+                    <div class="xacminh_quen">
+                        <a class="link_help">Quên mật khẩu</a>
+                    </div>
+
+                    <div class="xacminh_btn_control">
+                        <button class="btn" id="btn_dangnhap_trolai">TRỞ LẠI</button>
+                        <button class="btn btn--primary">ĐĂNG NHẬP</button>
+
+
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <!--form  dang ki-->
+    <div class="modal" id="modal_id_dangki">
+        <div class="modal_overlay" id="id_modal_overlay">
+
+        </div>
+        <div class="modal_body">
+
+
+            <div class="xacminh">
+
+                <div class="xacminh_container">
+                    <div class="xacminh_header">
+                        <h3 class="xacminh_heding">Đăng kí</h3>
+                        <span class="xacminh_chuyendoiform-btn" id="chuyendangnhap">Đăng nhập</span>
+                    </div>
+
+                    <div class="xacminh_form">
+                        <div class="xacminh_form-group">
+                            <input type="text" class="xacminh_form-input" placeholder="Họ và Tên của bạn">
+                        </div>
+                        <div class="xacminh_form-group">
+                            <input type="text" class="xacminh_form-input" placeholder="Email của bạn">
+                        </div>
+
+                        <div class="xacminh_form-group">
+                            <input type="password" class="xacminh_form-input" placeholder="Mật khẩu của bạn">
+                        </div>
+
+                        <div class="xacminh_form-group">
+                            <input type="password" class="xacminh_form-input" placeholder="Nhập lại mật khẩu của bạn">
+                        </div>
+                    </div>
+
+                    <div class="xacminh_form-bosung">
+                        <p class="xacminh_form-chinhsach">
+                            Bằng việc đáng kí, bạn đã đồng ý với chúng tôi về
+                            <a href="#" class="xacminh_form-link">Điều khoản dịch vụ</a> và
+                            <a href="#" class="xacminh_form-link">Chính sách bảo mật</a>
+                        </p>
+                    </div>
+
+                    <div class="xacminh_btn_control">
+                        <button class="btn" id="trolai">TRỞ LẠI</button>
+                        <button class="btn btn--primary">ĐĂNG KÍ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <!--------------------------------------------->
+    <!--thêm vào giỏ hàng-->
+
+
+
+    <div class="modal" id="modal_id_giohang">
+        <div class="modal_overlay" id="id_modal_overlay_giohang">
+
+        </div>
+        <div class="modal_body">
+            <div class="xacminh">
+                <div class="xacminh_container">
+                    <div class="xacminh_header">
+                        <h3 class="xacminh_heding">Giỏ hàng</h3>
+                        <div class="close">x</div>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="cart-row">
+                            <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+                            <span class="cart-price cart-header cart-column">Giá</span>
+                            <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+                        </div>
+                        <div class="cart-items">
+
+                        </div>
+                        <div class="cart-total">
+                            <strong class="cart-total-title">Tổng Cộng:</strong>
+                            <span class="cart-total-price">0VNĐ</span>
+                        </div>
+
+
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn close-footer" id="dong_gio_hang">Đóng</button>
+                            <button type="button" class="btn btn--primary order">Thanh Toán</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--------------------------------------------->
+
+
+    <!----------------------------------->
+    <!--js của đăng kí đăng nhập-->
+
+    <!--dang nhap-->
+    <script>
+        var modal_dangnhap = document.getElementById("modal_id_dangnhap");
+        var modal_dangki = document.getElementById("modal_id_dangki");
+        var modal_giohang = document.getElementById("modal_id_giohang");
+        var btn_trolai_dangnhap = document.getElementById("btn_dangnhap_trolai");
+        var btn_overlay_dangnhap = document.getElementById("id_modal_overlay_dangnhap");
+
+
+        btn_dangnhap.onclick = function() {
+            if (modal_dangki.style.display == "flex" || modal_giohang.style.display == "flex") {
+                modal_dangki.style.display = "none";
+                modal_giohang.style.display = "none";
+                modal_dangnhap.style.display = "flex";
+
+            }
+            modal_dangnhap.style.display = "flex";
+
+        }
+
+        btn_overlay_dangnhap.onclick = function() {
+            modal_dangnhap.style.display = "none";
+        }
+
+        btn_trolai_dangnhap.onclick = function() {
+            modal_dangnhap.style.display = "none";
+        }
+    </script>
+
+
+    <!---dang ki-->
+    <script>
+        var modal_dangki = document.getElementById("modal_id_dangki");
+        var modal_dangnhap = document.getElementById("modal_id_dangnhap");
+        var modal_giohang = document.getElementById("modal_id_giohang");
+        var chuyendangnhap = document.getElementById("chuyendangnhap");
+        var btn_dangki = document.getElementById("btn_dangki");
+        var btn_trolai_dangki = document.getElementById("trolai");
+        var btn_overlay_dangki = document.getElementById("id_modal_overlay");
+
+
+
+        btn_dangki.onclick = function() {
+            if (modal_dangnhap.style.display == "flex" || modal_giohang.style.display == "flex") {
+
+                modal_dangnhap.style.display = "none";
+                modal_giohang.style.display = "none";
+                modal_dangki.style.display = "flex";
+            }
+            modal_dangki.style.display = "flex";
+
+
+        }
+
+        btn_overlay_dangki.onclick = function() {
+            modal_dangki.style.display = "none";
+        }
+
+        btn_trolai_dangki.onclick = function() {
+            modal_dangki.style.display = "none";
+        }
+    </script>
+
+
+    <!--gio hang-->
+    <script>
+        var modal_giohang = document.getElementById("modal_id_giohang");
+        var modal_dangki = document.getElementById("modal_id_dangki");
+        var modal_dangnhap = document.getElementById("modal_id_dangnhap");
+        var btn_overlay_giohang = document.getElementById("id_modal_overlay_giohang");
+        var btn = document.getElementById("cart");
+        var close = document.getElementsByClassName("close")[0];
+        // tại sao lại có [0] như  thế này bởi vì mỗi close là một html colection nên khi mình muốn lấy giá trị html thì phải thêm [0]. 
+        //Nếu mình có 2 cái component cùng class thì khi [0] nó sẽ hiển thị component 1 còn [1] thì nó sẽ hiển thị component 2.
+        var close_footer = document.getElementsByClassName("close-footer")[0];
+        var order = document.getElementsByClassName("order")[0];
+        btn.onclick = function() {
+            if (modal_dangki.style.display == "flex" || modal_dangnhap.style.display == "flex") {
+                modal_dangki.style.display = "none";
+                modal_dangnhap.style.display = "none";
+                modal_giohang.style.display = "flex";
+            }
+
+            modal_giohang.style.display = "flex";
+        }
+        close.onclick = function() {
+            modal_giohang.style.display = "none";
+        }
+        close_footer.onclick = function() {
+            modal_giohang.style.display = "none";
+        }
+
+        btn_overlay_giohang.onclick = function() {
+            modal_giohang.style.display = "none";
+        }
+
+        order.onclick = function() {
+            alert("Cảm ơn bạn đã thanh toán đơn hàng")
+        }
+        window.onclick = function(event) {
+            if (event.target == modal_giohang) {
+                modal_giohang.style.display = "none";
+            }
+        }
+    </script>
+    <!-------------------------------->
+
+</body>
+
+</html>
